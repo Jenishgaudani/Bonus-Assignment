@@ -30,13 +30,7 @@ func postTweet(status string) (string, error) {
 	apiSecretKey := os.Getenv("TWITTER_API_SECRET_KEY")
 	accessToken := os.Getenv("TWITTER_ACCESS_TOKEN")
 	accessTokenSecret := os.Getenv("TWITTER_ACCESS_TOKEN_SECRET")
-	//if apiKey == "" || apiSecretKey == "" || accessToken == "" || accessTokenSecret == "" {
-	//	fmt.Println("Error: Missing required API credentials.")
-	/* fmt.Printf("TWITTER_API_KEY: %s\n", apiKey)
-	fmt.Printf("TWITTER_API_SECRET_KEY: %s\n", apiSecretKey)
-	fmt.Printf("TWITTER_ACCESS_TOKEN: %s\n", accessToken)
-	fmt.Printf("TWITTER_ACCESS_TOKEN_SECRET: %s\n", accessTokenSecret) */
-	// OAuth1 Config setup
+	
 	config := oauth1.NewConfig(apiKey, apiSecretKey)
 	token := oauth1.NewToken(accessToken, accessTokenSecret)
 	// HTTP client with OAuth1 credentials
